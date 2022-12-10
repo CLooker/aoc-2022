@@ -4,18 +4,12 @@ import com.clooker.aoc2022.solution.Solution;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import lombok.RequiredArgsConstructor;
 
-public class OneOne extends Solution<Integer> {
+@RequiredArgsConstructor
+public abstract class OneSolution extends Solution<Integer> {
 
   private final int sumTopN;
-
-  public OneOne() {
-    this.sumTopN = 1;
-  }
-
-  public OneOne(int sumTopN) {
-    this.sumTopN = sumTopN;
-  }
 
   @Override
   protected Integer apply(List<String> lines) {

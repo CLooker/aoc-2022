@@ -5,9 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import com.clooker.aoc2022.solution.Solution;
 import org.junit.jupiter.api.Test;
 
-class OneOneTest {
+class OneOneSolutionTest {
 
-  private final Solution<Integer> solution = new OneOne();
+  private final Solution<Integer> solution = new OneOneSolution();
 
   @Test
   void apply() {

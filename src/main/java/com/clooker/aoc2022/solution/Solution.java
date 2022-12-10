@@ -15,7 +15,7 @@ public abstract class Solution<T> {
     return apply(findLines(inputLocation));
   }
 
-  protected List<String> findLines(String inputLocation) {
+  protected final List<String> findLines(String inputLocation) {
     try {
       Path inputPath = Stream
         .of(
@@ -29,9 +29,8 @@ public abstract class Solution<T> {
         .map(Path::of)
         .filter(Files::exists)
         .findAny()
-        .orElseThrow(
-          () ->
-            new IllegalArgumentException("failed finding file at input location " + inputLocation)
+        .orElseThrow(() ->
+          new IllegalArgumentException("failed finding file at input location " + inputLocation)
         );
 
       return Files.readAllLines(inputPath);

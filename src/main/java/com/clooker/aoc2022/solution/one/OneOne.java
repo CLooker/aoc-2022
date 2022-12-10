@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class OneOne extends Solution<Integer> {
+
   private final int sumTopN;
 
   public OneOne() {

@@ -6,6 +6,15 @@ import java.util.Comparator;
 import java.util.List;
 
 public class OneOne extends Solution<Integer> {
+  private final int sumTopN;
+
+  public OneOne() {
+    this.sumTopN = 1;
+  }
+
+  public OneOne(int sumTopN) {
+    this.sumTopN = sumTopN;
+  }
 
   @Override
   protected Integer apply(List<String> lines) {
@@ -27,7 +36,8 @@ public class OneOne extends Solution<Integer> {
     return calorieCountLists
       .stream()
       .map(calorieCounts -> calorieCounts.stream().reduce(0, Integer::sum))
-      .max(Comparator.comparing(Integer::valueOf))
-      .orElse(-1);
+      .sorted(Comparator.reverseOrder())
+      .limit(sumTopN)
+      .reduce(0, Integer::sum);
   }
 }

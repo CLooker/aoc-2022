@@ -15,23 +15,23 @@ public abstract class TwoSolution extends Solution<Integer> {
     return lines
       .stream()
       .map(this::getRpsChoices)
-      .map(this::getPoints)
-      .map(points -> points[1])
+      .map(this::getPointTotals)
+      .map(pointTotals -> pointTotals[1])
       .reduce(0, Integer::sum);
   }
 
   protected abstract RpsChoice[] getRpsChoices(String line);
 
-  private Integer[] getPoints(RpsChoice[] rpsChoices) {
+  private Integer[] getPointTotals(RpsChoice[] rpsChoices) {
     RpsChoice c1 = rpsChoices[0];
     RpsChoice c2 = rpsChoices[1];
     Map<RpsChoice, Integer> pointsByRpsChoice = Map.of(ROCK, 1, PAPER, 2, SCISSORS, 3);
-    Integer[] points = new Integer[] { pointsByRpsChoice.get(c1), pointsByRpsChoice.get(c2) };
+    Integer[] pointTotals = new Integer[] { pointsByRpsChoice.get(c1), pointsByRpsChoice.get(c2) };
     boolean tied = c1.equals(c2);
 
     if (tied) {
-      points[0] += 3;
-      points[1] += 3;
+      pointTotals[0] += 3;
+      pointTotals[1] += 3;
     } else {
       int winnerIdx =
         switch (c1) {
@@ -40,9 +40,9 @@ public abstract class TwoSolution extends Solution<Integer> {
           case SCISSORS -> c2.equals(PAPER) ? 0 : 1;
         };
 
-      points[winnerIdx] += 6;
+      pointTotals[winnerIdx] += 6;
     }
 
-    return points;
+    return pointTotals;
   }
 }

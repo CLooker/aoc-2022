@@ -7,9 +7,7 @@ import static com.clooker.aoc2022.solution.two.RpsChoice.SCISSORS;
 import com.clooker.aoc2022.solution.Solution;
 import java.util.List;
 import java.util.Map;
-import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
 public abstract class TwoSolution extends Solution<Integer> {
 
   @Override

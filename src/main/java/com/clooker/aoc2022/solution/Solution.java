@@ -15,7 +15,9 @@ public abstract class Solution<T> {
     return apply(findLines(inputLocation));
   }
 
-  protected final List<String> findLines(String inputLocation) {
+  protected abstract T apply(List<String> lines);
+
+  private List<String> findLines(String inputLocation) {
     try {
       Path inputPath = Stream
         .of(
@@ -38,6 +40,4 @@ public abstract class Solution<T> {
       throw new RuntimeException(e);
     }
   }
-
-  protected abstract T apply(List<String> lines);
 }

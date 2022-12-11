@@ -1,10 +1,9 @@
-package com.clooker.aoc2022.solution.one;
+package com.clooker.aoc2022.solution.two;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.clooker.aoc2022.solution.Solution;
-import com.clooker.aoc2022.solution.two.TwoTwoSolution;
 import org.junit.jupiter.api.Test;
 
 class TwoTwoSolutionTest {

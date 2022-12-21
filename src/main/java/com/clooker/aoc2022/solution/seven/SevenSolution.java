@@ -1,16 +1,12 @@
 package com.clooker.aoc2022.solution.seven;
 
 import com.clooker.aoc2022.solution.Solution;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Stack;
 import java.util.stream.Collectors;
-import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
 public abstract class SevenSolution extends Solution<Long> {
 
   @Override

@@ -1,6 +1,5 @@
 package com.clooker.aoc2022.solution.five;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.clooker.aoc2022.solution.Solution;
@@ -12,9 +11,7 @@ class FiveOneSolutionTest {
 
   @Test
   void apply() {
-    assertAll(
-      () -> assertEquals("CMZ", solution.apply("5-demo-input.txt")),
-      () -> assertEquals("GFTNRBZPF", solution.apply("5-input.txt"))
-    );
+    assertEquals("CMZ", solution.apply("5-demo-input.txt"));
+    assertEquals("GFTNRBZPF", solution.apply("5-input.txt"));
   }
 }

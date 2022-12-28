@@ -1,6 +1,5 @@
 package com.clooker.aoc2022.solution.three;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.clooker.aoc2022.solution.Solution;
@@ -12,9 +11,7 @@ class ThreeTwoSolutionTest {
 
   @Test
   void apply() {
-    assertAll(
-      () -> assertEquals(70, solution.apply("3-demo-input.txt")),
-      () -> assertEquals(2639, solution.apply("3-input.txt"))
-    );
+    assertEquals(70, solution.apply("3-demo-input.txt"));
+    assertEquals(2639, solution.apply("3-input.txt"));
   }
 }

@@ -1,6 +1,5 @@
 package com.clooker.aoc2022.solution.eight;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.clooker.aoc2022.solution.Solution;
@@ -12,9 +11,7 @@ class EightTwoSolutionTest {
 
   @Test
   void apply() {
-    assertAll(
-      () -> assertEquals(8, solution.apply("8-demo-input.txt")),
-      () -> assertEquals(474606, solution.apply("8-input.txt"))
-    );
+    assertEquals(8, solution.apply("8-demo-input.txt"));
+    assertEquals(474606, solution.apply("8-input.txt"));
   }
 }

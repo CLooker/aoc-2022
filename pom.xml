@@ -53,27 +53,27 @@
         <version>2.22.2</version>
       </plugin>
 
-      <plugin>
-        <groupId>com.hubspot.maven.plugins</groupId>
-        <artifactId>prettier-maven-plugin</artifactId>
-        <version>0.18</version>
-        <configuration>
-          <ignoreConfigFile>true</ignoreConfigFile>
-          <ignoreEditorConfig>true</ignoreEditorConfig>
-          <prettierJavaVersion>2.0.0</prettierJavaVersion> <!--https://github.com/jhipster/prettier-java/releases-->
-          <printWidth>100</printWidth>
-          <tabWidth>2</tabWidth>
-          <useTabs>false</useTabs>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>validate</phase>
-            <goals>
-              <goal>write</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>com.hubspot.maven.plugins</groupId>-->
+<!--        <artifactId>prettier-maven-plugin</artifactId>-->
+<!--        <version>0.18</version>-->
+<!--        <configuration>-->
+<!--          <ignoreConfigFile>true</ignoreConfigFile>-->
+<!--          <ignoreEditorConfig>true</ignoreEditorConfig>-->
+<!--          <prettierJavaVersion>2.0.0</prettierJavaVersion> &lt;!&ndash;https://github.com/jhipster/prettier-java/releases&ndash;&gt;-->
+<!--          <printWidth>100</printWidth>-->
+<!--          <tabWidth>2</tabWidth>-->
+<!--          <useTabs>false</useTabs>-->
+<!--        </configuration>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <phase>validate</phase>-->
+<!--            <goals>-->
+<!--              <goal>write</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
     </plugins>
   </build>
 
